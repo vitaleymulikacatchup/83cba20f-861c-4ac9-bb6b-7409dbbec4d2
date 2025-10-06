@@ -65,9 +65,6 @@ export default function Home() {
       </div>
       <div id="footer" data-section="footer">
         <BaseFooter
-          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/design-a-simple-high-contrast-logo-for-m-1759756836723-0d29803e.jpg"
-          logoAlt="MemePulse Logo"
-          copyrightText="© 2023 MemePulse. All Rights Reserved."
           columns={[
             { title: "Links", items: [
               { label: "Home", onClick: () => {} },
@@ -83,6 +80,7 @@ export default function Home() {
               { label: "Terms of Service", onClick: () => {} }
             ]}
           ]}
+          copyrightText="© 2023 MemePulse. All Rights Reserved."
         />
       </div>
     </SiteThemeProvider>
