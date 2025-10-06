@@ -10,7 +10,7 @@ import BaseFooter from '@/components/sections/layouts/footer/BaseFooter';
 const theme: SiteTheme = {
   styleVariant: "funAndTrendy",
   colorTemplate: 2,
-  textAnimation: "slide"
+  textAnimation: "slide",
 };
 
 export default function Home() {
@@ -18,7 +18,7 @@ export default function Home() {
     <SiteThemeProvider theme={theme}>
       <div id="nav" data-section="nav">
         <NavbarStyleApple
-          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/design-a-simple-high-contrast-logo-for-m-1759756836723-0d29803e.jpg"
+          logoSrc="https://webuild-dev.s3.eu-north-1.amazonaws.com/users/user_30ordogEOn7VO6LZdIWb5atLXky/design-a-simple-high-contrast-logo-for-m-1759757250155-12cdba03.jpg"
           logoAlt="MemePulse Logo"
           brandName="MemePulse"
           navItems={[
@@ -26,61 +26,66 @@ export default function Home() {
             { name: "About", id: "about" },
             { name: "How to Buy", id: "how-to-buy" },
             { name: "Tokenomics", id: "tokenomics" },
-            { name: "Footer", id: "footer" }
+            { name: "Footer", id: "footer" },
           ]}
         />
       </div>
-      <div id="hero" data-section="hero">
+      <div id="hero" className="scroll-mt-24">
         <BillboardHero
-          title="Welcome to MemePulse!"
-          subtitle="Join the fun and start minting your memecoin today!"
+          title="Welcome to MemePulse"
+          subtitle="Your playful journey into the world of memecoins starts here!"
         />
       </div>
-      <div id="about" data-section="about">
+      <div id="about" className="scroll-mt-24">
         <CtaAbout
           title="About MemePulse"
-          descriptions={["MemePulse is a community-driven memecoin built for fun.", "We aim to create an engaging platform for all users."]}
+          descriptions={[
+            "MemePulse is not just a meme coin, it's a community-driven initiative aimed at creating fun and engaging opportunities in the crypto realm.",
+            "We believe in transparency, creativity, and accessibility for all who wish to join our exciting journey through web3!"
+          ]}
         />
       </div>
-      <div id="how-to-buy" data-section="how-to-buy">
+      <div id="how-to-buy" className="scroll-mt-24">
         <HowToBuy3D
           steps={[
-            { position: "left", image: "", title: "Step 1: Connect Wallet", description: "Connect your crypto wallet to start buying." },
-            { position: "center", image: "", title: "Step 2: Fund with ETH", description: "Fund your wallet with Ethereum for purchases." },
-            { position: "right", image: "", title: "Step 3: Buy MemePulse", description: "Purchase MemePulse directly in the app." }
+            { position: 'left', image: 'https://example.com/step1.jpg', title: 'Step 1', description: 'Get your wallet ready!' },
+            { position: 'center', image: 'https://example.com/step2.jpg', title: 'Step 2', description: 'Buy some meme tokens!' },
+            { position: 'right', image: 'https://example.com/step3.jpg', title: 'Step 3', description: 'Join the community!' }
           ]}
         />
       </div>
-      <div id="tokenomics" data-section="tokenomics">
+      <div id="tokenomics" className="scroll-mt-24">
         <TextGridTokenomics
           title="MemePulse Tokenomics"
-          description="Here’s how our tokenomics work:"
+          description="Discover our token distribution and community incentives."
           tokenData={[
-            { value: "1 Billion", description: "Total Supply" },
-            { value: "Late 2023", description: "Launch Date" },
-            { value: "10%", description: "Liquidity Pool" },
-            { value: "5%", description: "Team Allocation" }
+            { value: "100M", description: "Total Supply" },
+            { value: "5%", description: "Transaction Tax" },
+            { value: "10%", description: "Liquidity" },
+            { value: "15%", description: "Community Rewards" }
           ]}
         />
       </div>
-      <div id="footer" data-section="footer">
+      <div id="footer" className="scroll-mt-24">
         <BaseFooter
           columns={[
             { title: "Links", items: [
               { label: "Home", onClick: () => {} },
               { label: "About", onClick: () => {} },
+              { label: "How to Buy", onClick: () => {} },
               { label: "Tokenomics", onClick: () => {} }
             ]},
-            { title: "Support", items: [
-              { label: "Contact", onClick: () => {} },
-              { label: "FAQ", onClick: () => {} }
+            { title: "Socials", items: [
+              { label: "Twitter", onClick: () => {} },
+              { label: "Discord", onClick: () => {} },
+              { label: "Telegram", onClick: () => {} }
             ]},
             { title: "Legal", items: [
               { label: "Privacy Policy", onClick: () => {} },
               { label: "Terms of Service", onClick: () => {} }
             ]}
           ]}
-          copyrightText="© 2023 MemePulse. All Rights Reserved."
+          copyrightText="© 2023 MemePulse. All rights reserved."
         />
       </div>
     </SiteThemeProvider>
